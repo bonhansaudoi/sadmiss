@@ -1,0 +1,149 @@
+/* ---header--------- */
+.marquee {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(6, 182, 212, var(--tw-text-opacity));
+}
+
+.header-container {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .header-container {
+    padding: 0.75rem;
+  }
+}
+
+.aside {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 640px) {
+  .aside {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 25%;
+  }
+}
+
+.sen1 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sen1 {
+    display: block;
+  }
+}
+
+.sen2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sen2 {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-image {
+    width: 50%;
+  }
+}
+
+.header-image img {
+  height: 5rem;
+}
+@media (min-width: 768px) {
+  .header-image img {
+    height: 6rem;
+  }
+}
+
+/* ---carousel-left------- */
+.carousel-left {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 33.333333%; 
+}
+@media (min-width: 1024px) {
+  .carousel-left {
+    width: 25%;
+  }
+}
+
+.left {
+    height: 12rem;  
+}
+@media (min-width: 640px) {
+    .left {
+        height: 14rem;
+    }
+}
+@media (min-width: 768px) {
+    .left {
+        height: 20rem;
+    }
+}
+@media (min-width: 1024px) {
+    .left {
+        height: 100%;
+    }
+}
+.left img {
+  height: 100%;
+  width: 100%;
+}
+
+/* ---carousel-right------- */
+.carousel-right {
+  display: none;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .carousel-right {
+    display: block;
+    width: 25%;
+  }
+}
+@media (min-width: 1024px) {
+  .right {
+    height: 100%;
+  }
+}
+.right img {
+  height: 100%;
+  width: 100%;
+}  
+
+/* ---carousel------------- */
+.Nfade {
+    -webkit-animation-name: Nfade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: Nfade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Nfade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes Nfade {
+    from {opacity: .4}
+    to {opacity: 1} 
+}
+
+/* ----Nborder---------- */
+.Nborder {  
+    border: 4px solid pink;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: border 20s 5s infinite;  
+}	
+@keyframes border {
+    0%   {border-color: tomato;}
+    25%  {border-color: yellow;}
+    50%  {border-color: pink;}
+    100% {border-color: cyan;}
+}  

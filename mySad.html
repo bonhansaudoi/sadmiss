@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySad</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/mySad.css">
+</head>
+<body class="bg-black">
+    <canvas class="canvas" id="canvas"></canvas>
+    <main class="layout">
+<!--------------------------------------------------------------------------------------->
+        <div class="header">
+            <marquee class="marquee" behavior="" direction="">
+                <!-- 
+                        <span class="text-pink-400 font-semibold">Tịnh pháp-giới chơn-ngôn:</span> <span class="text-teal-400">Án lam xóa ha. Án lam xóa ha. Án lam xóa ha.</span> 
+                        <span class="text-orange-400 font-semibold">Tịnh tam-nghiệp chơn-ngôn:</span> <span class="text-indigo-400">Án ta phạ bà phạ, truật đà ta phạ, đạt mạ ta phạ, bà phạ truật độ hám. Án ta phạ bà phạ, truật đà ta phạ, đạt mạ ta phạ, bà phạ truật độ hám. Án ta phạ bà phạ, truật đà ta phạ, đạt mạ ta phạ, bà phạ truật độ hám.</span>
+                        <span class="text-red-400 font-semibold">Cúng hương:</span> <span class="text-green-400">Nguyện thử diệu hương vân, Biến mãn thập phương giới, Cúng dường nhứt-thế Phật, Tôn pháp chư Bồ tát, Vô biên Thanh văn chúng, Cập nhứt thế Thánh-Hiền, Duyên khởi quang minh đài, Xứng tánh tác Phật-sự, Phổ huân chư chúng-sanh, Giai phát Bồ-Ðề tâm, Viễn-ly chư vọng-nghiệp, Viên-thành vô-thượng đạo.</span>
+                        <span class="text-purple-400 font-semibold">Kỳ nguyện:</span> <span class="text-red-400">Tư thời đệ-tử chúng đẳng phúng tụng kinh chú, xưng tán hồng-danh, tập thử công-đức, nguyện thập-phương thường-trú Tam-bảo, Bổn-sư Thích-Ca Mâu-Ni Phật, tiếp dẫn đạo-sư A-Di-Ðà Phật, từ-bi tiếp độ hương linh..... pháp-danh..... phiền-não đoạn-diệt, nghiệp-chướng tiêu trừ, tốc xả mê đồ, siêu sanh Tịnh-độ, ngưỡng kỳ chư Phật từ-bi phóng quang tiếp độ hương-linh vãng sanh Cực-lạc quốc.</span>
+                        <span class="text-green-400 font-semibold">Tán phật:</span> <span class="text-yellow-400">Pháp vương vô-thượng tôn Tam-giới vô luân thất Thiên nhơn chi Ðạo-sư Tứ-sanh chi từ-phụ Ư nhứt niệm quy-y Năng diệt tam-kỳ nghiệp Xưng dương nhược tán-thán Ức kiếp mạc năng tận.</span>
+                        <span class="text-red-400 font-semibold">Quán tưởng: </span><span class="text-cyan-400">Năng lễ, sở lễ tánh không tịch, Cảm ứng đạo-giao nan tư nghì, Ngã thử đạo tràng như Ðế-châu, Thập phương chư Phật ảnh hiện trung, Ngã thân ảnh hiện chư Phật tiền, Ðầu diện tiếp túc quy mạng lễ.</span>
+                        <span class="text-purple-400 font-semibold">Tán lư hương: </span><span class="text-gray-400">Lư hương sạ nhiệt, Pháp giới mông huân, Chư Phật hải hội tất diêu văn, Tùy xứ kiết tường vân, Thành ý phương ân, Chư Phật hiện toàn thân. Nam-mô Hương-Vân-Cái Bồ-tát ma-ha-tát. Nam-mô Hương-Vân-Cái Bồ-tát ma-ha-tát. Nam-mô Hương-Vân-Cái Bồ-tát ma-ha-tát.</span>
+                            -->
+        
+                <!--  -->
+                <span class="text-orange-400 font-semibold">Chí tâm đảnh lễ </span><span class="text-yellow-300">Nam-mô Tận
+                    hư-không, biến pháp-giới, quá, hiện, vị-lai thập-phương chư Phật, Tôn-Pháp, Hiền-Thánh Tăng,
+                    Thường-trú Tam-Bảo.</span>
+                <span class="text-cyan-400 font-semibold">Chí tâm đảnh lễ </span><span class="text-yellow-300">Nam-mô Ta-bà
+                    Giáo-chủ Bổn-sư Thích-Ca Mâu-Ni Phật, Ðương-lai hạ sanh Di-Lặc Tôn Phật, Ðại-trí Văn-Thù
+                    Sư-Lợi Bồ-tát, Ðại-hạnh Phổ-Hiền Bồ-tát, Hộ-Pháp Chư-tôn Bồ-tát, Linh-sơn hội thượng Phật Bồ-tát.</span>
+                <span class="text-pink-400 font-semibold">Chí tâm đảnh lễ </span><span class="text-yellow-300">Nam-mô Tây-phương
+                    Cực-lạc thế-giới Ðại-từ Ðại-bi A-Di-Ðà Phật, Ðại bi Quán-Thế-Âm Bồ-tát, Ðại-Thế-Chí
+                    Bồ-tát, Ðại-nguyện Ðịa-Tạng-Vương Bồ-tát, Thanh-tịnh Ðại-hải-chúng Bồ-tát.</span>
+            </marquee>
+        
+            <div class="header-container">
+                <aside class="aside">
+                    <img src="https://s5.gifyu.com/images/sen2c1c03cee0693a458.gif" alt="sen2" width="60" height="60">
+                    <img src="https://s5.gifyu.com/images/sen189df9d51f8a2ceff.gif" alt="sen1" width="60" height="60"
+                        class="sen1">
+                </aside>
+        
+                <header class="header-image">
+                    <img src="https://s5.gifyu.com/images/causieubeb2aa5b497181aa.gif" class="img" alt="causieu">
+                    <!-- <img src="https://s5.gifyu.com/images/samhoi098c68def23258d4.gif" alt="samhoi"> -->
+                </header>
+        
+                <aside class="aside">
+                    <img src="https://s5.gifyu.com/images/sen189df9d51f8a2ceff.gif" alt="sen1" width="60" height="60">
+                    <img src="https://s5.gifyu.com/images/sen2c1c03cee0693a458.gif" alt="sen2" width="60" height="60"
+                        class="sen2">
+                </aside>
+            </div>
+        </div>
+
+        <div class="content">
+            <aside class="carousel-left">
+                <div class="aside-youtube-container">
+                    <div id="left" class="left Nborder">
+                        <img src="https://s5.gifyu.com/images/phat1f0548cc9b8aabdc9.gif" alt="phat1"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phat20a29095b0fcc41dd.gif" alt="phat2"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phat3ccc2cebccaadacc6.gif" alt="phat3"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phat4ff0dc2bafeefd256.gif" alt="phat4"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phat53517f86bf28613c6.gif" alt="phat5"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phat6532e4201a6a48cfc.gif" alt="phat6" 
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phat13d74c299ce332881.jpg" alt="phat1"
+                            class="">
+                    </div>
+                    <div class="hidden">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>    
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </aside>
+        
+            <div class="content-youtube">
+                <div class="youtube">
+                    <iframe class="iframe-youtube"
+                        src="https://www.youtube.com/embed/eKjGW16x6X0"
+                        allowfullscreen frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+  
+            <aside class="carousel-right">
+                <div class="aside-youtube-container">        
+                    <div id="right" class="right Nborder">
+                        <img src="https://s5.gifyu.com/images/phatba129e5d67b94624952.gif" alt="phatba1"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phatba2adad5458946f7cea.gif" alt="phatba2"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phatba1bb215dedcedf66e4.jpg" alt="phatba1a"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phatba26445e6d4a430822b.jpg" alt="phatba2a"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phatba33cd6f83fdcaeb51d.jpg" alt="phatba3"
+                            class="">
+                        <img src="https://s5.gifyu.com/images/phatba4164ffa66b3164b5b.jpg" alt="phatba4"
+                            class="">
+                    </div>  
+                    <div class="hidden">
+                        <span class="dotR"></span><span class="dotR"></span><span class="dotR"></span>
+                        <span class="dotR"></span><span class="dotR"></span><span class="dotR"></span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="footer">
+            <footer class="footer-youtube">
+                <button type="button" class="btn-youtube">SÁM</button>
+                <button type="button" class="btn-youtube">KINH</button>
+                <button type="button" class="btn-youtube">NHẠC</button>
+                <a type="button" href="myMiss.html" class="btn-youtube">MY MISS</a>
+            </footer>
+        </div>
+<!--------------------------------------------------------------------------------------->
+    </main>
+    <script src="js/snow.js"></script>
+    <script src="js/mySad.js"></script>
+</body>
+</html>

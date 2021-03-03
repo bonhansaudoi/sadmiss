@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMiss</title> 
+    
+    <link rel="stylesheet" href="css/app.css">  
+    <link rel="stylesheet" href="css/myMiss.css">
+</head>
+
+<body class="bg-black">
+    <canvas class="canvas"></canvas>
+    <main class="layout">
+        <!--------------------------------------------------------------------------------------->
+        <div class="header"> 
+            <header class="header-youtube">
+                <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0077.gif" alt="music-note" 
+                width="30" height="50" class="music-note" />
+            
+                <div class="title">
+                    <span>T</span><span>Ì</span><span>N</span><span class="">H</span>
+                    <span>K</span><span>H</span><span>Ú</span><span class="">C</span>
+                    <span>B</span><span>N</span><span>S</span><span>D</span>
+                </div>
+            
+                <img src="https://www.animatedimages.org/data/media/102/animated-music-image-0077.gif" alt="music-note"
+                 width="30" height="50" class="music-note" />      
+            </header>
+
+            <img src="https://s5.gifyu.com/images/tiger-logo.png" alt="Tiger" width="80" height="80"
+                class="tiger">
+        </div>
+
+        <div class="content">
+            <aside class="left-aside-youtube">
+                <div class="aside-youtube-container">
+                    <img src="https://s5.gifyu.com/images/kiki1.md.jpg" alt="kiki1" class="kiki1">
+                </div>
+            </aside>
+
+            <div class="content-youtube">
+                <div class="youtube">
+                    <div class="youtube-menu">
+                        <h3 class="">Youtube-menu</h3>
+                        <ul class="">
+                            <li><a href="mySad/index.html" class="">MySad</a></li>
+                            <li><a href="" class=""></a>2</li>
+                        </ul>
+                    </div>
+
+                    <div class="youtube-cover">
+                        <img class=""
+                            src="https://s5.gifyu.com/images/kikih1.md.jpg" alt="kikih1">
+                    </div>
+
+                    <iframe class="iframe-youtube background-video" allow="autoplay" allowfullscreen
+                        src="https://www.youtube.com/embed/ppeWG-oiJkg?&autoplay=1&mute=1&loop=1&playlist=ppeWG-oiJkg&controls=0">
+                    </iframe>
+
+                    <iframe class="iframe-youtube hidden-video" allow="autoplay" allowfullscreen
+                        src="https://www.youtube.com/embed/videoseries?list=PLGPC65oaYvnsWfce9JHCo6YkPcky5OtUP&autoplay=1">
+                    </iframe>
+
+                    <iframe class="iframe-youtube main-video" src="" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <aside class="aside-youtube">
+                <div class="aside-youtube-container">
+                    <div class="aside-youtube-list">
+                        <img src="https://s5.gifyu.com/images/flash-lamp.gif" alt="flash-lamp" class="flash">
+                        
+                        <img src="https://s5.gifyu.com/images/equalizerd3c7d1b6fb017f3e.gif" alt="equalizer" class="equalizer">
+                     
+                        <ul id="youtubeList" class="youtube-list">            
+                            <li onclick="nhac()">
+                                <img src="https://s5.gifyu.com/images/nhac.jpg" alt="nhac">
+                                <small>Cánh thư mùa hạ</small>
+                            </li>
+                            <li onclick="nhacphongtra()">
+                                <img src="https://s5.gifyu.com/images/phongtra.jpg" alt="phongtra">
+                                <small>Nhạc phòng trà</small>
+                            </li>
+                            <li onclick="nhacvang()">
+                                <img src="https://s5.gifyu.com/images/nhacvang.jpg" alt="nhacvang">
+                                <small>Nhạc vàng</small>
+                            </li>
+                            <li onclick="tienchien()">
+                                <img src="https://s5.gifyu.com/images/tienchien.jpg" alt="tienchien">
+                                <small>Nhạc tiền chiến</small>
+                            </li>
+                            <li onclick="quehuong()">
+                                <img src="https://s5.gifyu.com/images/quehuong.jpg" alt="quehuong">
+                                <small>Nhạc quê hương</small>
+                            </li>
+                            <li class="active" onclick="khongloi()">
+                                <img src="https://s5.gifyu.com/images/khongloi1.jpg" alt="khongloi">
+                                <small>Nhạc không lời</small>
+                            </li>
+                            <li onclick="khongloi_quehuong()">
+                                <img src="https://s5.gifyu.com/images/khongloi-quehuong.jpg" alt="khongloi-quehuong">
+                                <small>Không lời quê hương</small>
+                            </li>
+                            <li onclick="khongloi_thugian()">
+                                <img src="https://s5.gifyu.com/images/thugian.jpg" alt="thugian">
+                                <small>Nhạc thư giản</small>
+                            </li>
+                            <li onclick="quanhoquetoi()">
+                                <img src="https://s5.gifyu.com/images/quanhoquetoi.jpg" alt="quanhoquetoi">
+                                <small>Quan họ quê tôi</small>
+                            </li>
+                            <li onclick="nhatkicuame()">
+                                <img src="https://s5.gifyu.com/images/nhatkicuame.jpg" alt="nhatkicuame">
+                                <small>Nhật kí của Mẹ</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="footer">
+            <footer class="footer-youtube">
+                <button type="button" class="btn-youtube">SÁM</button>
+                <button type="button" class="btn-youtube">KINH</button>
+                <button type="button" class="btn-youtube">NHẠC</button>
+                <a type="button" href="mySad.html" class="btn-youtube">MYSAD</a>
+            </footer>
+        </div>
+        <!--------------------------------------------------------------------------------------->
+    </main>
+    <script src="js/myMiss.js"></script>
+</body>
+</html>

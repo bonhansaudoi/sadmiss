@@ -1,0 +1,307 @@
+.header-youtube {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .header-youtube {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .music-note {
+    height: 4rem;
+    width: 2.5rem;
+  }
+}
+
+/* tiger */ 
+.tiger {
+  --tw-border-opacity: 1;
+  border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+  border-radius: 50%;
+  border-style: double;
+  border-width: 8px;
+  display: none;
+  position: absolute;
+}
+
+@media (min-width: 640px) {
+  .tiger {
+    display: block;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tiger {
+    right: 2rem;
+    top: 3rem;
+  }
+}
+
+/* title */
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(217, 70, 239, var(--tw-text-opacity));
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+/* animate header */
+img.tiger { 
+    animation: border-tiger 5s 1s infinite; 
+}	
+@keyframes border-tiger {
+   0%   {border-color: rgb(43, 41, 41);}
+   50%  {border-color:transparent;}
+   100% {border-color: rgb(43, 41, 41);}
+} 
+ 
+.title>span {
+    display: inline-block; 
+    animation: bnsd 6s linear infinite;
+}
+@keyframes bnsd {
+    0% {
+        text-shadow: 3px 3px #5d5f5c;
+    }
+    50% {
+        text-shadow: 3px 3px #f1e6e9;
+        transform: translateY(30px);
+    }
+    100% {
+        text-shadow: 30x 3px #5d5f5c;
+    }
+}
+span:nth-child(1) {
+    animation-delay: 0.5s;
+}
+span:nth-child(2) {
+    animation-delay: 1s;
+}
+span:nth-child(3) {
+    animation-delay: 1.5s;
+}
+span:nth-child(4) {
+    animation-delay: 2s;
+}
+span:nth-child(5) {
+    animation-delay: 2.5s;
+}
+span:nth-child(6) {
+    animation-delay: 3s;
+}
+span:nth-child(7) {
+    animation-delay: 3.5s;
+}
+span:nth-child(8) {
+    animation-delay: 4s;
+}
+span:nth-child(9) {
+    animation-delay: 4.5s;
+}
+span:nth-child(10) {
+    animation-delay: 5s;
+}
+span:nth-child(11) {
+    animation-delay: 5.5s;
+}
+span:nth-child(12) {
+    animation-delay: 6s;
+}
+
+/* left-side */
+.left-aside-youtube { 
+  margin-left: auto !important;
+  margin-right: auto !important;
+  position: relative !important;
+  width: 33.333333% !important;
+}
+
+@media (min-width: 1024px) {
+  .left-aside-youtube {
+    width: 25% !important;
+  }
+}
+
+/* kiki */
+.kiki1 {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+/* right-side */
+.aside-youtube-list > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0 !important;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)) !important;
+}
+
+.aside-youtube-list {
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(156, 163, 175, var(--tw-border-opacity)) !important;
+  border-radius: 0.5rem !important;
+  border-width: 4px !important;
+  height: 20rem !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+@media (min-width: 1024px) {
+  .aside-youtube-list {
+    height: 100% !important;
+  }
+} 
+
+/* youtube-list */
+.youtube-list > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0 !important;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse)) !important;
+} 
+.youtube-list {
+  flex-direction: column !important;
+  height: 100% !important;
+  overflow: auto !important;
+  position: absolute !important;
+  right: 0px !important;
+  left: 0px !important;
+  top: 3.5rem !important;
+  z-index: 0 !important;
+}  
+
+.flash {
+  height: 100% !important;
+  position: absolute !important;
+  top: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  width: 100% !important;
+  z-index: -1 !important;
+}
+
+.equalizer {
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(156, 163, 175, var(--tw-border-opacity)) !important;
+  border-bottom-width: 4px !important;
+  height: 3.5rem !important;
+  position: absolute !important;
+  top: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  width: 100% !important;
+  z-index: 10 !important;
+}  
+
+/* #youtubeList */
+#youtubeList>li { 
+    display: flex;   
+    color: gray; font-weight: 900;
+    cursor: pointer;
+}
+#youtubeList>li>img {
+    max-width: 80px; height: auto;
+    border: 2px solid  rgb(15, 241, 241);  
+    margin: 0px 5px;
+}
+#youtubeList small {
+    line-height: 50px; 
+}
+
+#youtubeList>li.active {
+    color: yellow;
+    font-weight: bolder;
+    text-transform: uppercase;
+} 
+
+#youtubeList>li.active>img {
+    border-color: yellow;
+}
+#youtubeList>li:hover {
+    background: rgba(153, 147, 147, 0.20);
+    color: cyan;
+} 
+
+/* Miss youtube */
+.youtube-menu  {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 40;
+}
+
+.youtube-menu h3 {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
+.youtube-cover {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 30;
+}
+ 
+.youtube-cover img {
+  border-radius: 50%;
+  float: right;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  width: 5rem;
+}
+
+@media (min-width: 768px) {
+  .youtube-cover img {
+    width: 7rem;
+  }
+}
+
+.background-video {
+  z-index: 20;
+}
+
+.hidden-video {
+  z-index: 10;
+}
