@@ -52,7 +52,7 @@
 }
 
 .header-image img {
-  height: 5rem;
+  height: 4rem;
 }
 @media (min-width: 768px) {
   .header-image img {
